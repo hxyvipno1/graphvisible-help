@@ -1,4 +1,8 @@
 @import '~antd/dist/antd.css';
+@import '../node_modules/react-resizable/css/styles.css';
+@import '~codemirror/lib/codemirror.css';
+@import '~codemirror/theme/material.css';
+@import '~codemirror/theme/xq-light.css';
 html,body,#root{
   height: 100%;
 }
@@ -15,4 +19,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.my-resizable-handle{
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  bottom: 0;
+  right: -5px;
+  cursor: col-resize;
+  z-index: 1;
 }

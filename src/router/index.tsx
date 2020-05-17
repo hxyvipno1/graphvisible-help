@@ -17,10 +17,11 @@ export default ()=>(
     <Router>
         <Switch>
             <Layout>           
-                <Route path="/"  render={()=>( <Redirect to="/api" push/> )}/>
+                
                 <Route exact path="/api" component={Api}></Route>
                 <Route exact path="/doc" component={Doc}></Route>
-                <Route exact path="/code" component={Code}></Route>            
+                <Route exact path="/code" component={Code}></Route>    
+                <Route exact  path="/"  render={()=>( <Redirect to="/code" push/> )}/>        
             </Layout>
         </Switch>
     </Router>

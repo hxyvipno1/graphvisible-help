@@ -1,13 +1,10 @@
 import React from 'react';
 // import logo from './logo.svg';
 import styles from './App.module.scss';
-import { Layout, Menu, Breadcrumb } from 'antd';
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+import { Layout} from 'antd';
 import Nav from './Nav';
-import Router from 'router'
 
-const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
+const { Header} = Layout;
 
 interface appProp{
   children?:React.ReactNode
