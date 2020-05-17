@@ -10,8 +10,11 @@ export default function CodeBox() {
     const [width, setWidth] = useState(500);
     const [code, setCode] = useState('');
     useEffect(()=>{
-        fetch('/graph-html/shape/node.html').then(res=>res.text()).then(data=>{
-            setCode(data)
+        //生产环境请求静态资源要加上服务器前缀
+        const htmlUrl = process.env.NODE_ENV==="development"?'/graph-html/shape/node.html':
+        '/graphvisible-help/graph-html/shape/node.html';
+        fetch(htmlUrl).then(res=>res.text()).then(data=>{
+            setCode(data);
         })
     },[])
 

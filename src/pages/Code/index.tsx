@@ -6,7 +6,7 @@ import styles from './index.module.scss';
 
 
 export default function Code() {
-   
+
 
     return (
         <>
